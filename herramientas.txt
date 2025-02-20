@@ -1,0 +1,27 @@
+herramientas:
+image_picker: Permite a los usuarios capturar fotos con la cámara o seleccionar imágenes de la galería.
+flutter_image_filters: filtros como Sepia, Blanco y Negro, y Vintage.
+path_provider: almacenar las obras maestras editadas en el dispositivo del usuario.
+
+1. pagina principal:
+boton: (Tomar Foto) Abre la cámara del dispositivo.
+boton: (Elegir de la Galería) Abre la galería del dispositivo.
+
+2. pagina de galeria de imagenes:
+trae de la memoria las imagenes cargadas.
+
+3. pagina de edicion:
+- barra de filtros en la parte inferior
+- boton de guardar (Tu obra maestra mágica ha sido guardada!)
+Los usuarios pueden elegir entre una variedad de filtros predefinidos para añadir un toque único a sus fotos (por ejemplo, Sepia, Blanco y Negro, Vintage).
+
+
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+  image_picker: ^1.0.7  # Para seleccionar imágenes de la cámara/galería
+  flutter_image_filters: ^0.0.3  # Para aplicar filtros a las imágenes
+  path_provider: ^2.1.2  # Para guardar imágenes en el dispositivo
+

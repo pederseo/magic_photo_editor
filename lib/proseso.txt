@@ -1,0 +1,56 @@
+________________________HOME PAGE_____________________
+
+MODULOS
+import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
+import 'edit.dart';
+
+stateless widget {
+
+    @override
+    funcion capturar_imagen(source) {
+        imagen = picker.pickImage(source: source);
+        navegator.push(edit_page(imagen))
+    }
+
+    widget build(){
+        scafold{
+
+            boton_camara(capturar_imagen(source.camara))
+
+            boton_galeria(capturar_imagen(source.galeria))
+        }
+    }
+}
+
+________________________EDIT PAGE______________________
+
+MODULOS
+import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:image_picker/image_picker.dart';
+import 'dart:io';
+import 'dart:ui' as ui;
+import '../utils/filter_options.dart';
+import '../services/permission_service.dart';
+import '../services/image_saver.dart';
+import '../services/media_scanner.dart';
+import '../widgets/filter_list.dart';
+import '../widgets/image_preview.dart';
+
+class edit_page statefull widget {
+    final xfile imagen; 
+    const EditPage({super.key, required this.imageFile});  // esperar recibir como parametro la imagen
+
+    crear estado _editScreenState
+
+    // define los estados iniciales
+    GlobalKey _globalKey → Se usa para capturar la imagen renderizada.
+    Image _image → Convierte la imagen en un objeto Image.file().
+    FilterOption _currentFilter → Almacena el filtro actual (inicia con el primero de FilterPresets.filters).
+
+    @override
+    funcion initState(){
+        // Se ejecuta al iniciar la pantalla para cargar la imagen y el primer filtro.
+    }
+}
